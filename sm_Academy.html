@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media Academy</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Handlee&family=Oswald:wght@200..700&family=Outfit&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- 
+social media icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- External CSS file -->
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="logo">
+            <h2 class="handlee">Social Media Academy</h2>
+        </div>
+<button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#course">Course</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1 class=>Take Control of Your Social Media</h1>
+        <p>Learn how to grow your business online with confidence.</p>
+        <button class="cta" onclick="enroll()">Enroll Now</button>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1557838923-2985c318be48" alt="social media">
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="learning">
+
+    <div>
+        <h2 class="handlee">About the Course</h2>
+        <p>
+            Built on the belief that anyone can manage their own social media with the right guidance,
+            structure, and tools.
+        </p>
+
+        <p>Learn to show up on:</p>
+        <ul>
+    <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+    <li><i class="fa-brands fa-tiktok"></i> TikTok</li>
+    <li><i class="fa-brands fa-youtube"></i> YouTube</li>
+    <li><i class="fa-brands fa-facebook"></i> Facebook</li>
+</ul>
+    </div>
+</section>
+
+
+<!-- COURSE -->
+<section id="course">
+    <h2>Course Modules</h2>
+
+    <div class="modules">
+
+        <div class="module">
+            <h3>Module 1</h3>
+            <p>What is Brand Marketing</p>
+        </div>
+
+        <div class="module">
+            <h3>Module 1.2</h3>
+            <p>Elements that Reflect a Brand</p>
+        </div>
+
+        <div class="module">
+            <h3>Module 2</h3>
+            <p>Brand Strategy</p>
+        </div>
+
+        <div class="module">
+            <h3>Module 3</h3>
+            <p>Music Selection</p>
+        </div>
+
+        <div class="module">
+            <h3>Module 3.1</h3>
+            <p>Components of Song Choice</p>
+        </div>
+
+        <div class="module">
+            <h3>Module 4</h3>
+            <p>Visual Aesthetic & Stories</p>
+        </div>
+
+        <div class="module">
+            <h3>Module 5</h3>
+            <p>Content Funnels & CTA Use</p>
+        </div>
+
+        <div class="module">
+            <h3>Module 6</h3>
+            <p>Do's and Don'ts of Social Media Marketing</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ENROLL FORM -->
+<section id="enroll">
+    <h2>Enroll & Payment Options</h2>
+
+    <p> our course is straightforward and you can start showing up differently tomorrow</p>
+
+    <form>
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Choose Payment Plan</label>
+        <select required>
+            <option value="">Select an option</option>
+            <option value="full">Full Payment - $365</option>
+            <option value="paygo">Pay as you go - $62 per lesson</option>
+            <option value="klarna">Finance via PayPal</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Social Media Academy</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function enroll() {
+    alert("Welcome! You're one step closer to mastering social media 🚀");
+}
+</script>
+
+</body>
+</html>
