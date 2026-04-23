@@ -156,6 +156,15 @@ ul li i {
         width: 100%;
         max-width: 280px;
     }
+
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+    }
+    
+
     h1 {
         font-size: 1.8rem;
     }
@@ -165,12 +174,47 @@ ul li i {
     }
 
     .handlee {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
     img {
         max-width: 100%;
         height: auto;
     }
+   #course .modules {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .course-hero {
+        position: relative;
+    min-height: 90vh;
+    padding: 30px 15px;
+    align-items: center;
+}
+
+.overlaybox {
+    max-width: 85%;
+    padding:5px;
+}
+
+.overlaybox h1 {
+    font-size: 1.2rem;
+    line-height:1;
+}
+
+.overlaybox p {
+    font-size: 0.65rem;
+}
+   
+}
+
+
+/* 
+on the go image */
+
+
+div img {
+  width: 500px;
+  height: auto;
 }
 
 /* =========================
@@ -181,9 +225,10 @@ ul li i {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px;
+    padding: 70px;
     background: linear-gradient(135deg,#ffb6d5,#00c2c7);
     color: white;
+    font-size: 1.2rem;
 }
 
 .hero-text {
@@ -193,7 +238,7 @@ ul li i {
 #home img {
     width: 350px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.3); */
 }
 
 /* BUTTONS */
@@ -226,11 +271,12 @@ button:hover {
     align-items: center;
     padding: 60px;
     background: #a1f9ff;
+    font-size: 1.2rem;
 }
 
 #about img {
     width: 300px;
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
@@ -244,11 +290,13 @@ button:hover {
 
 .modules {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
 .module {
+    display:flex;
+    flex-direction: column;
     background: white;
     padding: 20px;
     border-radius: 15px;
@@ -260,6 +308,70 @@ button:hover {
     transform: translateY(-5px);
 }
 
+
+.module {
+  position: relative;
+  overflow: hidden;
+}
+
+.module::after {
+  content: attr(data-sneak);
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: #00c2c7;
+  color: white;
+  padding: 15px;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+    text-align: center;
+ 
+}
+
+.module:hover::after {
+  bottom: 0;
+}
+
+
+
+/* 
+COURSE HERO */
+.course-hero {
+    position: relative;
+    background-image: url(assets/social\ media\ \(6\).png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 95vh;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlaybox {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 30px;          
+    max-width: 600px;        
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.overlaybox h1 {
+    font-size: 2.5rem;   
+}
+.overlaybox p {
+    font-size: 1.2rem;  
+}
+
+@media (max-width: 768px) {
+    .course-hero {
+        grid-template-columns: 1fr;
+    }
+}
 /* =========================
    ENROLL FORM
 ========================= */
@@ -268,6 +380,7 @@ button:hover {
     padding: 60px;
     background: #e0f7fa;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 form {
@@ -276,6 +389,23 @@ form {
     gap: 12px;
     max-width: 400px;
     margin: auto;
+
+}
+
+#enroll form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: auto;
+
+    padding: 25px;
+    border-radius: 15px;
+
+    background: white;
+    border: 1px solid rgba(0, 194, 199, 0.4);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 input,
@@ -284,6 +414,275 @@ select {
     border-radius: 8px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.logo-fun{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   text-align: center;
+   padding: 50px;
+}
+
+.logo-spin-text {
+            align-items: center;
+            font-size: 2.5rem;
+        }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+    .logospin {
+        width: 400px;   
+        height:auto;  /* keeps aspect ratio */
+        animation: spin 2s linear infinite;
+        align-items: center;
+        
+      
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+}
+
+/* FAQ SECTION 
+ */
+
+#chat-section {
+    background: #00c2c7;
+    padding: 80px;
+    text-align: center;
+    color: white;
+    
+}
+
+#chatBox {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 15px;
+    height: 160px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-input {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.chat-input input {
+    padding: 10px;
+    width: 60%;
+    border-radius: 10px;
+    border: none;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    border: none;
+    background: white;
+    color: #00c2c7;
+    border-radius: 10px;
+    cursor: pointer;
+    width: auto;
+    border: 1px solid black;
+}
+
+.message {
+    padding: 10px 14px;
+    border-radius: 18px;
+    max-width: 75%;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+  
+}
+
+.message:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+.message {
+    animation: pop 0.2s ease;
+}
+
+
+.user {
+    background: #e0f7fa;
+    align-self: flex-end;
+    color: #ffffff;
+}
+
+.bot {
+    background: #ffe6f0;
+    align-self: flex-start;
+    color: #ff69b4;
+    border-bottom-left-radius: 5px;
+}
+
+.chat-badge {
+    display: inline-block;
+    padding: 15px 12px;
+    font-size: 1.5rem;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* 
+
+
+
+/* chat window */
+#chatWidget {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+
+    width: 300px;
+    height: 350px;
+
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+
+    display: none; /* hidden by default */
+    flex-direction: column;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    z-index: 999;
+}
+
+/* header */
+#chatHeader {
+    background: #00c2c7;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* chat area */
+#chatBox {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+
+
+/* 
+TESTIMONIALS  */ 
+
+#testimonials {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.test-title {
+    font-family: "Handlee", cursive;
+    font-size: 2.5rem;
+    color: #00c2c7;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* CARDS */
+.testimonial-card {
+    background: #ffe6f0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* STARS */
+.stars {
+    color: gold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.testimonial-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+    margin: 0;
+    color: #00c2c7;
+}
+
+.testimonial-card span {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1400px) {
+    #home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    }
+    .hero-text {
+       margin-left: 600px;
+    margin-top: 10px;
+    }
+    
+
+    .modules {
+        max-width: 1200px;
+        margin: auto;
+    }
 }
 
 /* =========================
@@ -295,5 +694,5 @@ footer {
     padding: 20px;
     background: #00c2c7;
     color: white;
-    margin-top: 40px;
+    margin-top: 0px;
 }

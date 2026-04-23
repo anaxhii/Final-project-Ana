@@ -7,8 +7,6 @@
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Oswald:wght@200..700&family=Outfit&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<!-- 
-social media icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- External CSS file -->
@@ -22,7 +20,7 @@ social media icons -->
 <header>
     <nav>
         <div class="logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="logo">
+            <img src="assets/social media (2).png" alt="logo">
             <h2 class="handlee">Social Media Academy</h2>
         </div>
 <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -37,30 +35,31 @@ social media icons -->
 <!-- HOME -->
 <section id="home" class="hero">
     <div class="hero-text">
-        <h1 class=>Take Control of Your Social Media</h1>
-        <p>Learn how to grow your business online with confidence.</p>
+        <h1 class="">Take Control of Your Social Media</h1>
+        <p> Stop randonmly posting, it’s not working. Learn how others are growing their business on social media and grow your business without hiring an expert!</p>
         <button class="cta" onclick="enroll()">Enroll Now</button>
     </div>
 
-    <img src="https://images.unsplash.com/photo-1557838923-2985c318be48" alt="social media">
+    <img src="assets/social media (3).png" alt="about social media">
 </section>
 
 <!-- ABOUT -->
 <section id="about">
     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="learning">
 
-    <div>
+    <div class="about-course">
         <h2 class="handlee">About the Course</h2>
-        <p>
-            Built on the belief that anyone can manage their own social media with the right guidance,
-            structure, and tools.
-        </p>
+        <p>This course is built on the belief that anyone can confidently manage their own social media with the right guidance, structure, and tools.
+       So if posting feels awkward, inconsistent, and getting you nowhere, this course is for you. </p>
 
         <p>Learn to show up on:</p>
+
+ <!-- social media icons -->
+
         <ul>
-    <li><i class="fa-brands fa-instagram"></i> Instagram</li>
-    <li><i class="fa-brands fa-tiktok"></i> TikTok</li>
-    <li><i class="fa-brands fa-youtube"></i> YouTube</li>
+    <li><i class="fa-brands fa-instagram"> </i> Instagram</li>
+    <li><i class="fa-brands fa-tiktok"> </i>TikTok</li>
+    <li><i class="fa-brands fa-youtube"></i> YouTube</li> 
     <li><i class="fa-brands fa-facebook"></i> Facebook</li>
 </ul>
     </div>
@@ -73,42 +72,42 @@ social media icons -->
 
     <div class="modules">
 
-        <div class="module">
+        <div class="module" data-sneak="The small details that you’re missing…" >
             <h3>Module 1</h3>
             <p>What is Brand Marketing</p>
         </div>
 
-        <div class="module">
+        <div class="module" data-sneak="Discover how to go viral without paid ads">
             <h3>Module 1.2</h3>
             <p>Elements that Reflect a Brand</p>
         </div>
 
-        <div class="module">
+        <div class="module" data-sneak="The strategy for endless content…">
             <h3>Module 2</h3>
             <p>Brand Strategy</p>
         </div>
 
-        <div class="module">
+        <div class="module" data-sneak="How to use audio trends to your advantage…">
             <h3>Module 3</h3>
             <p>Music Selection</p>
         </div>
 
-        <div class="module">
+        <div class="module" data-sneak="The difference between trending audio… and using it correctly">
             <h3>Module 3.1</h3>
             <p>Components of Song Choice</p>
         </div>
 
-        <div class="module">
+        <div class="module" data-sneak="Learn what makes people stop scrolling">
             <h3>Module 4</h3>
             <p>Visual Aesthetic & Stories</p>
         </div>
 
-        <div class="module">
+        <div class="module" data-sneak=" Learn why you’re getting views but no customers">
             <h3>Module 5</h3>
             <p>Content Funnels & CTA Use</p>
         </div>
 
-        <div class="module">
+        <div class="module" data-sneak="Avoid the mistakes you dont realize your making">
             <h3>Module 6</h3>
             <p>Do's and Don'ts of Social Media Marketing</p>
         </div>
@@ -116,13 +115,25 @@ social media icons -->
     </div>
 </section>
 
+
+<!-- 
+COURSE HERO  -->
+
+<div class="course-hero">
+    <div class="overlaybox">
+         <h1>Learn On The Go, At Your Pace. </h1>
+        <p>Finish in 8 days or less. </p> 
+        <p>Modules are short, straight to the point, and show you exactly what to post so you can confidently grow on social media. </p>
+</div>
+</div>
+
 <!-- ENROLL FORM -->
 <section id="enroll">
     <h2>Enroll & Payment Options</h2>
 
-    <p> our course is straightforward and you can start showing up differently tomorrow</p>
+    <p>Secure your spot and start tomorrow.</p>
 
-    <form>
+    <form id="enrollForm">
         <label>Full Name</label>
         <input type="text" required>
 
@@ -141,17 +152,82 @@ social media icons -->
     </form>
 </section>
 
+
+<div class="logo-fun">
+    <h1 class="logo-spin-text"> Learn it. Post it. Grow it!</h1>
+    <img class="logospin" src="assets/social media (2).png"> 
+</div>
+
+
+
+<!-- CHAT BUTTON -->
+
+
+<!-- 
+FAQ SECTION -->
+
+<section id="chat-section">
+   <div class="chat-badge">Live Chat Assistant</div>
+
+    <div id="chatBox"></u></div>
+         
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your question..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</section>
+
+
+
+<!-- TESTIMONIALS >>> -->
+
+    <section id="testimonials">
+
+  <h2 class="test-title">What Students Are Saying</h2>
+
+  <div class="testimonial-grid">
+
+    <!-- BOX 1 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>
+        “I was posting randomly before this course. Now I actually understand what I’m doing and my engagement has doubled.”
+      </p>
+      <h4>Sarah M.</h4>
+      <span>Small Business Owner</span>
+    </div>
+
+    <!-- BOX 2 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>
+        “This made social media finally make sense. I stopped guessing and started growing.”
+      </p>
+      <h4>James T.</h4>
+      <span>Freelancer</span>
+    </div>
+
+    <!-- BOX 3 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>
+        “We trained our whole team with this. It completely changed how we create content.”
+      </p>
+      <h4>Aisha K.</h4>
+      <span>Marketing Manager</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
 <!-- FOOTER -->
 <footer>
     <p>© 2026 Social Media Academy</p>
 </footer>
-
-<!-- JAVASCRIPT -->
-<script>
-function enroll() {
-    alert("Welcome! You're one step closer to mastering social media 🚀");
-}
-</script>
 
 </body>
 </html>
