@@ -12,7 +12,10 @@ function toggleMenu() {
 }
 
 
-// form submission 
+// / form submission 
+
+
+
 document.getElementById("enrollForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -170,3 +173,37 @@ document.getElementById("userInput").addEventListener("keydown", function(event)
         sendMessage();
     }
 });
+
+
+
+
+
+// new page tryout 
+// User fills form
+// Their name is saved
+// They get redirected
+// New page says: “Welcome, [Name]!”
+// Page is hidden + protected
+
+const btn = document.getElementById("submitBtn");
+
+if (btn) {
+    btn.addEventListener("click", function (event) {
+        event.preventDefault(); // IMPORTANT so form doesn't reload
+
+        const fullName = document.getElementById("fullName").value;
+        const userName = document.getElementById("userName").value;
+
+        localStorage.setItem("studentName", fullName || userName);
+        localStorage.setItem("accessGranted", "true");
+
+        window.location.href = "module1.html";
+    });
+}
+
+const name = localStorage.getItem("studentName");
+
+if (name) {
+    document.getElementById("welcome").textContent =
+        `Welcome, ${name}! 👋`;
+}

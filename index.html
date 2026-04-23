@@ -138,23 +138,28 @@ COURSE HERO  -->
     <p>Secure your spot and start tomorrow.</p>
 
     <form id="enrollForm">
-        <label>Full Name</label>
-        <input type="text" required>
 
-        <label>Email</label>
-        <input type="email" required>
+  <label for="fullName">Full Name</label>
+  <input type="text" id="fullName" name="fullName" required autocomplete="name">
 
-        <label>Choose Payment Plan</label>
-        <select required>
-            <option value="">Select an option</option>
-            <option value="full">Full Payment - $365</option>
-            <option value="paygo">Pay as you go - $62 per lesson</option>
-            <option value="klarna">Finance via PayPal</option>
-        </select>
+  <label for="userName">Username</label>
+  <input type="text" id="userName" name="userName" placeholder="Create a Username" required autocomplete="username">
 
-        <button type="submit">Submit</button>
-    </form>
-</section>
+  <label for="payment">Choose Payment Plan</label>
+  <select id="payment" name="payment" required autocomplete="off">
+    <option value="">Select an option</option>
+    <option value="full">Full Payment - $365</option>
+    <option value="paygo">Pay as you go - $62 per lesson</option>
+    <option value="klarna">Finance via PayPal</option>
+  </select>
+
+  <button id="submitBtn" type="submit">Submit</button>
+
+</form>
+
+
+<!-- SPINNY LOGO SECTION 
+ -->
 
 
 <div class="logo-fun">
@@ -164,11 +169,10 @@ COURSE HERO  -->
 
 
 
-<!-- CHAT BUTTON -->
 
 
 <!-- 
-FAQ SECTION -->
+CHAT SECTION -->
 
 <section id="chat-section">
    <div class="chat-badge">Live Chat Assistant</div>
