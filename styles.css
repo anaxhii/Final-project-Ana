@@ -353,7 +353,7 @@ COURSE HERO */
 .overlaybox {
     position: relative;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.88);
+    background:white;
     padding: 30px;          
     max-width: 600px;        
     border-radius: 12px;
@@ -361,10 +361,10 @@ COURSE HERO */
 }
 
 .overlaybox h1 {
-    font-size: 2.5rem;   
+    font-size: 1.8rem;   
 }
 .overlaybox p {
-    font-size: 1.2rem;  
+    font-size: 1.5rem;  
 }
 
 @media (max-width: 768px) {
